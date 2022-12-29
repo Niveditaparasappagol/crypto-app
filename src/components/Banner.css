@@ -1,0 +1,44 @@
+.image {
+    height: 550px;
+    width: 100%;
+}
+
+
+.image-tag {
+    position: relative;
+    text-align: center;
+}
+
+
+.h-tag {
+    color: aliceblue;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    font-weight: bold;
+    font-family: "Montserrat";
+    padding-bottom: 15px;
+    /* height: 40%; */
+}
+
+.p-tag {
+    color: aliceblue;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    font-family: "Montserrat";
+    /* font-weight: bold; */
+    /* font-weight: 700; */
+}
+.carousel{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* color: aliceblue; */
+    /* background-color: transparent; */
+}
