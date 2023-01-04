@@ -37,7 +37,7 @@ function Coins() {
   const firstPOstIndex = lastPostIndex - postPerPage;
   const currentPost = coins.slice(firstPOstIndex, lastPostIndex);
 
-  // const ref = useRef(null);
+  const tableref = useRef(null);
 
   return (
     <>
@@ -65,7 +65,7 @@ function Coins() {
                 <th>Market Cap</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody ref={tableref}>
               {currentPost.map((obj, index) => {
                 return (
                   <tr key={index}>
@@ -95,7 +95,7 @@ function Coins() {
         totalPost={coins.length}
         setCurrentPage={setCurrentPage}
         currentPage={currentPage}
-        // ref={ref}
+        refTable={tableref}
       />
     </>
   );

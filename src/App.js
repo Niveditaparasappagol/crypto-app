@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import Info from "./components/Info";
 import Coins from "./components/Coins";
 import Singlecoin from "./components/Singlecoin";
+// import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
@@ -15,6 +16,20 @@ function App() {
       <Info />
       <Coins />
       <Singlecoin />
+
+      {/* <BrowserRouter>
+        <Navbar />
+
+        <Routes>
+          <Hero />
+          <Route path="" element={<Hero />} />
+          <Route path="coins" element={<Coins />} />
+        </Routes>
+        <Featured />
+        <Info />
+
+        <Singlecoin />
+      </BrowserRouter> */}
     </>
   );
 }

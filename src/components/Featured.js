@@ -3,8 +3,15 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { FiArrowUpRight, FiArrowDown } from "react-icons/fi";
 import { fetchUrl } from "../constant/api";
+// import { useNavigate } from "react-router-dom";
 
 function Featured() {
+  // const navigation = useNavigate();
+
+  // const onClickHandler = () => {
+  //   alert("see more coins");
+  //   navigation("coins");
+  // };
   const [data, setData] = useState(null);
 
   const oneCoin = async () => {
