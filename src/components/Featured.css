@@ -1,9 +1,8 @@
 .featured {
     width: 100%;
     padding: 8rem 0;
-    background-color: rgba(0, 0, 0, 0.048);
-    clip-path: polygon(0 0, 100% 10%, 100% 100%, 0% 90%);
-    
+    background-color: rgba(0, 0, 0, 0.945);
+    clip-path: polygon(0 0, 100% 10%, 100% 100%, 0% 90%) ;
 }
 
 .featured .container {
@@ -19,15 +18,28 @@
     flex-direction: column;
     justify-content: center;
     padding-bottom: 2rem;
+    padding: 2.5rem;
+
+}
+.featured .left h2{
+    font-size: 50px;
+    color: aliceblue;
 }
 
 .featured .left p {
     margin: 1.5rem 0;
+    font-size: larger;
+    color: aliceblue;
+   
 }
+
 
 .featured .left .btn {
     align-self: flex-start;
+    background-color: gold;
+    color: black;
 }
+
 
 .featured .right {
     display: flex;
@@ -47,14 +59,26 @@
     box-shadow: rgb(0 0 0 / 12%) 0px 8px 24px;
     text-align: center;
 }
+.name-color{
+    color: aliceblue;
+    font-size: 23px;
+}
 
 .featured .right .card:hover {
-    box-shadow: rgb(0 0 0 / 20%) 0px 8px 24px;
+    box-shadow: white 0px 8px 24px;
+    /* background-color: aliceblue; */
+    transform: scale(1.1);
+    transition: 0.5s ease-in-out;
+    
+    
 }
 
 .featured .card .top {
     display: flex;
     flex-direction: column;
+}
+.card.top h5{
+    color: aliceblue;
 }
 
 .featured .right img {

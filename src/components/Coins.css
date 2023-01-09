@@ -1,31 +1,43 @@
 
-.carousel{
+/* .carousel{
     position: absolute;
     top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: aliceblue;
     background-color: transparent;
+} */
+.alice-carousel__stage-item * {
+    margin:10px;
 }
 .prices{
     display: flex;
     /* align-items: center; */
     justify-content: center;
-    color:rgb(11, 11, 12);
+    color:white;
     font-family:"Montserrat" ;
     /* font-weight: bold; */
+    background-color:   #26272b;
 }
 .search-input{
     width:100%;
-    height: 40px;
+    height: 55px;
+    background-color:   #26272b;;
+    color: white;
+ border-color: white;
+    border-radius: 5px;
+    font-size: larger;
+
 }
 .table{
     width: 100%;
+    color: aliceblue;
 }
 .row{
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-family:"Montserrat" ;
 }
 .one-image{
     width: 40px;
@@ -35,3 +47,16 @@
  
     align-content: center;
 }
+.search-coins{
+    background-color: black;
+    /* margin-right: 33px;
+    margin-left: 33px; */
+}
+.t-head th{
+    background-color: gold;
+    color:black;
+    /* width:55px */
+    font-family:"Montserrat" ;
+    height: 55px;
+}
+

@@ -3,17 +3,51 @@
     height: 70px;
     background-color: rgb(0, 0, 0);
     position: sticky;
-
+    top:0;
+    display:flex;
+    justify-content: space-between;
+}
+.nav-menu{
+margin-left:50px;
+/* margin-top: 20px; */
+display: flex;
+align-items: center;
+/* font-family:"Montserrat" ; */
 
 }
+.crypto-media{
+    color:aliceblue;
+    /*  */
+}
 
-.nav-menu {
+
+
+
+.nav-link{
     display: flex;
+    margin-right: 70px;
+  
     align-items: center;
-   text-decoration: none;
+    justify-content: space-between;
+    gap: 75px;
+}
+.coin-link{
+    font-family:"Montserrat" ; 
+    font-weight: bolder;
+    font-size: 20px;
+ 
+}
+.select{
+   width: 75px; 
+   height: 30px;
+   border-radius: 5px;
+   background-color: black;
+   color: white;
+   font-weight: bold;
+}
 
-    justify-content: space-around;
-    color: gold;
-
-
+@media only screen and (max-width: 600px) {
+    .navbar {
+        width: 100%;
+    }
 }

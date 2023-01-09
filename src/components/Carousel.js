@@ -12,8 +12,8 @@ function Carousel() {
       axios
         .get(trendingCoins(currency))
         .then((data) => {
-          setTrending(data.data.coins);
-          console.log(data.data.coins);
+          setTrending(data.data);
+          console.log(data.data);
         })
         .catch((err) => {
           console.log(err);
@@ -29,16 +29,33 @@ function Carousel() {
   const myStyle = {
     height: "80px",
     marginBottom: "10px",
+    whiteSpace: "30px",
+    autoWidth: "false",
+    innerWidth: "30px",
+
+    // margin: "0px 10px",
+    // marginLeft: "10px",
+    // marginRight: "10px",
+  };
+
+  const itemss = {
+    0: {
+      items: 1,
+    },
+    1024: {
+      items: 3,
+      itemsFit: "contain",
+    },
   };
 
   const handleDragStart = (e) => e.preventDefault();
 
   const items = trending.map((trend) => {
-    console.log(trend.item.large);
+    console.log(trend.item);
     return (
       <img
-        src={trend.item.large}
-        alt={trend.item.name}
+        src={trend.image}
+        alt={trend.name}
         onDragStart={handleDragStart}
         role="presentation"
         style={myStyle}
@@ -57,6 +74,9 @@ function Carousel() {
         // mouseTracking={true}
         animationDuration={1500}
         // disableDotsControls={true}
+        autoWidth={true}
+        innerWidth={30}
+        space={itemss}
       />
     </>
   );
