@@ -81,49 +81,49 @@ function Singlecoin() {
                             <tr>
                               <td>
                                 <p>
-                                  {single.market_data.price_change_percentage_1h_in_currency.inr.toFixed(
-                                    1
-                                  )}
+                                  {single.market_data.price_change_percentage_1h_in_currency[
+                                    currency.toLowerCase()
+                                  ].toFixed(1)}
                                   %
                                 </p>
                               </td>
                               <td>
                                 <p>
-                                  {single.market_data.price_change_percentage_24h_in_currency.inr.toFixed(
-                                    1
-                                  )}
+                                  {single.market_data.price_change_percentage_24h_in_currency[
+                                    currency.toLowerCase()
+                                  ].toFixed(1)}
                                   %
                                 </p>
                               </td>
                               <td>
                                 <p>
-                                  {single.market_data.price_change_percentage_7d_in_currency.inr.toFixed(
-                                    1
-                                  )}
+                                  {single.market_data.price_change_percentage_7d_in_currency[
+                                    currency.toLowerCase()
+                                  ].toFixed(1)}
                                   %
                                 </p>
                               </td>
                               <td>
                                 <p>
-                                  {single.market_data.price_change_percentage_14d_in_currency.inr.toFixed(
-                                    1
-                                  )}
+                                  {single.market_data.price_change_percentage_14d_in_currency[
+                                    currency.toLowerCase()
+                                  ].toFixed(1)}
                                   %
                                 </p>
                               </td>
                               <td>
                                 <p>
-                                  {single.market_data.price_change_percentage_30d_in_currency.inr.toFixed(
-                                    1
-                                  )}
+                                  {single.market_data.price_change_percentage_30d_in_currency[
+                                    currency.toLowerCase()
+                                  ].toFixed(1)}
                                   %
                                 </p>
                               </td>
                               <td>
                                 <p>
-                                  {single.market_data.price_change_percentage_1y_in_currency.inr.toFixed(
-                                    1
-                                  )}
+                                  {single.market_data.price_change_percentage_1y_in_currency[
+                                    currency.toLowerCase()
+                                  ].toFixed(1)}
                                   %
                                 </p>
                               </td>
@@ -139,7 +139,9 @@ function Singlecoin() {
                               <p>
                                 {symbol}
                                 {""}
-                                {single.market_data.low_24h.usd.toLocaleString()}
+                                {single.market_data.low_24h[
+                                  currency.toLowerCase()
+                                ].toLocaleString()}
                               </p>
                             </div>
                             <div className="info-row">
@@ -147,7 +149,9 @@ function Singlecoin() {
                               <p>
                                 {symbol}
                                 {""}
-                                {single.market_data.high_24h.usd.toLocaleString()}
+                                {single.market_data.high_24h[
+                                  currency.toLowerCase()
+                                ].toLocaleString()}
                               </p>
                             </div>
                           </div>
@@ -157,7 +161,9 @@ function Singlecoin() {
                               <p>
                                 {symbol}
                                 {""}
-                                {single.market_data.market_cap.usd.toLocaleString()}
+                                {single.market_data.market_cap[
+                                  currency.toLowerCase()
+                                ].toLocaleString()}
                               </p>
                             </div>
                             <div className="info-row">

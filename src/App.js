@@ -10,19 +10,17 @@ import Singlecoin from "./components/Singlecoin";
 
 function App() {
   return (
-    <>
-      <BrowserRouter>
-        <Navbar />
+    <BrowserRouter>
+      <Navbar />
 
-        <Routes>
-          <Route path="" element={<Homepage />} />
-          <Route path="coins" element={<Coins />} />
-          <Route path="coins/:id" element={<Singlecoin />} />
-        </Routes>
+      <Routes>
+        <Route path="" element={<Homepage />} />
+        <Route path="coins" element={<Coins />} />
+        <Route path="coins/:id" element={<Singlecoin />} />
+      </Routes>
 
-        {/* <Singlecoin /> */}
-      </BrowserRouter>
-    </>
+      {/* <Singlecoin /> */}
+    </BrowserRouter>
   );
 }
 

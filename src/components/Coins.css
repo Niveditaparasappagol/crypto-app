@@ -17,31 +17,71 @@
     color:white;
     font-family:"Montserrat" ;
     /* font-weight: bold; */
-    background-color:   #26272b;
+    background-color:   transparent;
+    margin-bottom: 15px;
+}
+/* .search-box{
+    margin-bottom: 10px;
+} */
+
+.search-coin{
+    margin: 55px;
+
 }
 .search-input{
     width:100%;
     height: 55px;
-    background-color:   #26272b;;
+    background-color:   black;
     color: white;
- border-color: white;
-    border-radius: 5px;
+ border-color: gold;
+    border-radius: 15px;
     font-size: larger;
+    
+}
+.obj-img{
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+/* column-gap: 20px; */
+justify-content: flex-start;
 
+
+/* column-gap: 30px; */
+/* justify-items: auto; */   
+}
+.table-body:hover{
+cursor: pointer;
+}
+.obj-name{
+    margin-right: 5px;
+    font-size: 14px;
+    color: rgba(119, 136, 153, 0.637);
 }
 .table{
     width: 100%;
     color: aliceblue;
+    border-radius: 7px;
+    margin-top: 20px;
+    /* text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden; */
+    
 }
 .row{
     display: flex;
     flex-direction: column;
-    align-items: center;
+align-items: flex-start;
     font-family:"Montserrat" ;
 }
 .one-image{
     width: 40px;
-    height:40px
+    height:40px;
+   margin-right: 3px;
+  
+
 }
 .table-row{
  
@@ -51,6 +91,7 @@
     background-color: black;
     /* margin-right: 33px;
     margin-left: 33px; */
+    overflow: hidden;
 }
 .t-head th{
     background-color: gold;
@@ -60,3 +101,10 @@
     height: 55px;
 }
 
+.coin-table{
+    /* margin-left: 5px; */
+    /* padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 8px; */
+    background-color: black;
+}
