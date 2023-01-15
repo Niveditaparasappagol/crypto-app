@@ -15,6 +15,7 @@ function Coins() {
   const [coins, setCoins] = useState([]);
   const [loading, setLoading] = useState(false);
   const [search, setSearch] = useState("");
+  const [page, setPage] = useState(1);
   const [currentPage, setCurrentPage] = useState(1);
   const [postPerPage, setPostPerPage] = useState(10);
 
@@ -39,33 +40,40 @@ function Coins() {
     fetchCoins();
   }, [currency]);
 
-  const lastPostIndex = currentPage * postPerPage;
-  const firstPOstIndex = lastPostIndex - postPerPage;
-  const currentPost = coins.slice(firstPOstIndex, lastPostIndex);
+  // const lastPostIndex = currentPage * postPerPage;
+  // const firstPOstIndex = lastPostIndex - postPerPage;
+  // const currentPost = coins.slice(firstPOstIndex, lastPostIndex);
 
   const tableref = useRef(null);
 
-  const profit = currentPost.price_change_percentage_24h;
+  // const profit = currentPost.price_change_percentage_24h;
+  const handleSearch =()=>{
+return coins.filter(
+  (coin)=>
+  coin.name.toLowerCase().includes(search)||
+  coin.symbol.toLowerCase().includes(search)
+)
+  }
 
   return (
     <>
-      <div className="search-coins">
+      <div className="search-coins" ref={tableref}>
         <Banner />
 
-        <div className="search-coin">
-          <h1 className="prices">Cryptocurrency Prices by Market cap</h1>
+        <div className="search-coin" >
+          <h1 className="prices" >Cryptocurrency Prices by Market cap</h1>
           {/* <div className="search-box"> */}
           <input
             className="search-input"
             type="text"
             placeholder="Search Your Favourite Coin...."
             value={search}
-            onChange={(e) => setSearch(e.target.value)}
+            onChange={(e) => setSearch(e.target.value)} 
           />
           {/* </div> */}
 
           <div className="coin-table">
-            <table border="1" className="table">
+            <table border="1" className="table" >
               <thead>
                 <tr className="t-head">
                   <th>Coin</th>
@@ -74,19 +82,12 @@ function Coins() {
                   <th>Market Cap</th>
                 </tr>
               </thead>
-              <tbody className="table-body" ref={tableref}>
-                {currentPost
-                  .filter((obj) => {
-                    return (
-                      obj.name.toLowerCase().includes(search) ||
-                      obj.symbol.toLowerCase().includes(search)
-                    );
-                  })
-                  .map((obj, index) => {
+              <tbody className="table-body" >
+                {loading?"Loading...":handleSearch() && handleSearch().slice((currentPage-1)*10,(currentPage-1)*10+10).map((obj, index) => {
                     console.log(obj);
-                    const profit = obj.price_change_percentage_24h;
+                    const profit = obj.price_change_percentage_24h>0;
                     return (
-                      <tr
+                      <tr className="table-row"
                         key={index}
                         onClick={() => {
                           navigation(`${obj.id}`);
@@ -107,8 +108,8 @@ function Coins() {
                           {symbol} {""}
                           {obj.current_price.toLocaleString()}
                         </td>
-                        <td style={{ color: profit > 0 ? "green" : "red" }}>
-                          {obj.price_change_percentage_24h.toFixed(2)}%
+                        <td style={{ color: profit > 0 ? "green " : "red" }}>
+                       {profit && "+"} {obj.price_change_percentage_24h.toFixed(2)}%
                         </td>
                         <td>
                           {" "}

@@ -5,6 +5,7 @@ import { FiArrowUpRight, FiArrowDown } from "react-icons/fi";
 import { trendingCoins } from "../constant/api";
 import { useNavigate } from "react-router-dom";
 import { CryptoState } from "../Context";
+import Coins from "./Coins";
 
 function Featured() {
   const navigation = useNavigate();
@@ -46,12 +47,12 @@ function Featured() {
               See More Coins
             </button>
           </div>
-          <div className="right">
+          <div   className="right">
             <div className="card">
               <div className="top">
                 <img src={data[0].image} alt="" />
               </div>
-              <div className="name-color">
+              <div onClick={ ()=>{navigation(`${data.id}`)}} className="name-color">
                 <h5>{data[0].name}</h5>
                 <p>
                   {symbol}

@@ -34,7 +34,7 @@ function Singlecoin() {
     fetchSinglecoin();
   }, []);
   return (
-    <div className="single-coin">
+    <div className="single-container">
       <div>
         {singlecoin &&
           singlecoin.map((single, id) => {
@@ -42,7 +42,7 @@ function Singlecoin() {
               <div key={id}>
                 <div className="coin-container">
                   <div className="content">
-                    <h1>{single.name}</h1>
+                    <h1 className="coin-name">{single.name}</h1>
                   </div>
                   <div className="content">
                     <div className="rank">
@@ -65,6 +65,8 @@ function Singlecoin() {
                           ].toLocaleString()}
                         </h1>
                       </div>
+                      </div>
+                      </div>
                       <div className="content">
                         <table>
                           <thead>
@@ -80,61 +82,59 @@ function Singlecoin() {
                           <tbody>
                             <tr>
                               <td>
-                                <p>
+                             
                                   {single.market_data.price_change_percentage_1h_in_currency[
                                     currency.toLowerCase()
                                   ].toFixed(1)}
                                   %
-                                </p>
+                              
                               </td>
                               <td>
-                                <p>
+                               
                                   {single.market_data.price_change_percentage_24h_in_currency[
                                     currency.toLowerCase()
                                   ].toFixed(1)}
                                   %
-                                </p>
+                              
                               </td>
                               <td>
-                                <p>
+                              
                                   {single.market_data.price_change_percentage_7d_in_currency[
                                     currency.toLowerCase()
                                   ].toFixed(1)}
                                   %
-                                </p>
+                              
                               </td>
                               <td>
-                                <p>
+                            
                                   {single.market_data.price_change_percentage_14d_in_currency[
                                     currency.toLowerCase()
                                   ].toFixed(1)}
-                                  %
-                                </p>
+                            
                               </td>
                               <td>
-                                <p>
+                            
                                   {single.market_data.price_change_percentage_30d_in_currency[
                                     currency.toLowerCase()
                                   ].toFixed(1)}
                                   %
-                                </p>
-                              </td>
+                            </td>
                               <td>
-                                <p>
+                               
                                   {single.market_data.price_change_percentage_1y_in_currency[
                                     currency.toLowerCase()
                                   ].toFixed(1)}
                                   %
-                                </p>
+                              
                               </td>
                             </tr>
                           </tbody>
                         </table>
                       </div>
-                      <div className="coin-content">
+                      <div className="content">
                         <div className="status">
                           <div className="info-left">
-                            <div className="coin-info">
+                            <div className="info-row">
                               <h4>24 Hour Low</h4>
                               <p>
                                 {symbol}
@@ -155,7 +155,7 @@ function Singlecoin() {
                               </p>
                             </div>
                           </div>
-                          <div className="right-row">
+                          <div className="info-right">
                             <div className="info-row">
                               <h4>Market Cap</h4>
                               <p>
@@ -163,7 +163,7 @@ function Singlecoin() {
                                 {""}
                                 {single.market_data.market_cap[
                                   currency.toLowerCase()
-                                ].toLocaleString()}
+                                ].toLocaleString().slice(0,9)}
                               </p>
                             </div>
                             <div className="info-row">
@@ -183,8 +183,8 @@ function Singlecoin() {
                           ></p>
                         </div>
                       </div>
-                    </div>
-                  </div>
+                   
+               
                 </div>
               </div>
             );
