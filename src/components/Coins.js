@@ -4,9 +4,10 @@ import { useState, useEffect, useRef } from "react";
 import { fetchUrl } from "../constant/api";
 import axios from "axios";
 import Pagination from "./Pagination";
-import Banner from "./Banner";
+import Banner from "./Banner.js";
 import { useNavigate } from "react-router-dom";
 import { CryptoState } from "../Context";
+
 
 function Coins() {
   const navigation = useNavigate();

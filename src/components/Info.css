@@ -31,5 +31,6 @@
 @media screen and (max-width:940px) {
     .signup .container {
         grid-template-columns: 1fr;
+        margin-left:16px ;
     }
 }

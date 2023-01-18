@@ -47,8 +47,36 @@ align-items: center;
    font-weight: bold;
 }
 
-@media screen and (max-width:991px) {
+/* @media screen and (max-width:940px) {
     .navbar {
         width: 100%;
+    }
+} */
+
+@media screen and (max-width:767px) {
+    .navlink {
+      gap : 25px  ;
+      margin-right: 25px;
+    }
+    .nav-menu{
+        margin-left:25px; 
+        font-size: 13px;
+    }
+    .navbar {
+        justify-content: space-evenly;
+    }
+}
+
+@media screen and (max-width:478px) {
+    .nav-link {
+      gap : 25px  ;
+      margin-right: 25px;
+    }
+    .nav-menu{
+        margin-left:25px; 
+        font-size: 13px;
+    }
+    .navbar {
+        justify-content: space-evenly;
     }
 }

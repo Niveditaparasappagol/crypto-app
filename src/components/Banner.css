@@ -20,7 +20,7 @@
     font-weight: bold;
     font-family: "Montserrat";
     padding-bottom: 15px;
-    font-size: 60px;
+    font-size: 50px;
     /* height: 40%; */
 }
 
@@ -44,4 +44,18 @@
     /* color: aliceblue; */
     /* background-color: transparent; */
    
+}
+
+
+
+@media screen and (max-width:767px) {
+    .h-tag{
+        font-size:35px
+       }
+}
+
+@media screen and (max-width:478px) {
+   .h-tag{
+    font-size:25px
+   }
 }

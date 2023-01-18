@@ -5,9 +5,9 @@ import Info from "./Info";
 function Homepage() {
   return (
     <>
-      <Hero />
-      <Featured />
-      <Info />
+      <Hero/>
+      <Featured/>
+      <Info/>
     </>
   );
 }

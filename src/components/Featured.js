@@ -5,14 +5,14 @@ import { FiArrowUpRight, FiArrowDown } from "react-icons/fi";
 import { trendingCoins } from "../constant/api";
 import { useNavigate } from "react-router-dom";
 import { CryptoState } from "../Context";
-import Coins from "./Coins";
+// import Coins from "../coins/Coins";
 
 function Featured() {
   const navigation = useNavigate();
   const { currency, symbol } = CryptoState();
 
-  const onClickHandler = () => {
-    // alert("see more coins");
+  const onClickHandler = (id) => {
+   
     navigation("/coins");
   };
   const [data, setData] = useState(null);
@@ -52,7 +52,7 @@ function Featured() {
               <div className="top">
                 <img src={data[0].image} alt="" />
               </div>
-              <div onClick={ ()=>{navigation(`${data.id}`)}} className="name-color">
+              <div onClick={ ()=>{navigation(`/coins/${data[0].id}`)}} className="name-color">
                 <h5>{data[0].name}</h5>
                 <p>
                   {symbol}
@@ -77,7 +77,7 @@ function Featured() {
               <div className="top">
                 <img src={data[1].image} alt="" />
               </div>
-              <div className="name-color">
+              <div onClick={ ()=>{navigation(`/coins/${data[1].id}`)}} className="name-color">
                 <h5>{data[1].name}</h5>
                 <p>
                   {symbol}
@@ -102,7 +102,7 @@ function Featured() {
               <div className="top">
                 <img src={data[2].image} alt="" />
               </div>
-              <div className="name-color">
+              <div onClick={ ()=>{navigation(`/coins/${data[2].id}`)}} className="name-color">
                 <h5>{data[2].name}</h5>
                 <p>
                   {symbol}
@@ -127,7 +127,7 @@ function Featured() {
               <div className="top">
                 <img src={data[3].image} alt="" />
               </div>
-              <div className="name-color">
+              <div onClick={ ()=>{navigation(`/coins/${data[3].id}`)}} className="name-color">
                 <h5>{data[3].name}</h5>
                 <p>
                   {symbol}
@@ -152,7 +152,7 @@ function Featured() {
               <div className="top">
                 <img src={data[4].image} alt="" />
               </div>
-              <div className="name-color">
+              <div  onClick={ ()=>{navigation(`/coins/${data[4].id}`)}}className="name-color">
                 <h5>{data[4].name}</h5>
                 <p>
                   {symbol}
@@ -177,7 +177,7 @@ function Featured() {
               <div className="top">
                 <img src={data[5].image} alt="" />
               </div>
-              <div className="name-color">
+              <div onClick={ ()=>{navigation(`/coins/${data[5].id}`)}} className="name-color">
                 <h5>{data[5].name}</h5>
                 <p>
                   {symbol}

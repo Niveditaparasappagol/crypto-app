@@ -3,10 +3,11 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 
 import Coins from "./components/Coins";
-// import Singlecoin from "./components/Singlecoin";
+import Singlecoin from "./components/Singlecoin";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Homepage from "./components/Homepage";
-import Singlecoin from "./components/Singlecoin";
+
+
 
 function App() {
   return (

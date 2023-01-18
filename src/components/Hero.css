@@ -1,20 +1,20 @@
 .hero .container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    margin: 4rem auto;
+    margin: 64px auto;
     justify-content: center;
     align-items: center;
-    padding: 1rem;
+    padding: 16px;
 }
 
 .hero .left {
-    padding: 2.5rem;
+    padding: 40px;
     /* font-family:"Montserrat" ;  */
 
 }
 
 .hero h1 {
-    padding: 1rem 0;
+    padding: 16px 0;
     /* font-weight: bold; */
 font-size: 55px;
 
@@ -24,11 +24,11 @@ font-size: 55px;
   
 }
 .hero .input-container {
-    padding: 1rem 0;
+    padding: 16px 0;
 }
 
 .hero .right {
-    padding: 1rem;
+    padding: 16px;
 }
 
 .hero .img-container {
@@ -46,7 +46,7 @@ font-size: 55px;
     background-color: orangered;
     color:white;
     border-radius: 24px 4px;
-    font-size: 1.1rem;
+    font-size: 17.6px;
     font-weight: 600;
     cursor: pointer;
   }
@@ -60,24 +60,24 @@ font-size: 55px;
 @media screen and (max-width: 940px) {
     .hero .container {
         grid-template-columns: 1fr;
-        margin: 1rem 0;
+        margin: 16px 0;
     }
 }
 @media screen and (max-width:768px) {
     h1 {
-      font-size: 2.1rem;
+      font-size:35.2;
       line-height: 1.2;
     }
     
    
     
     p {
-      font-size: 1rem;
+      font-size: 16px;
     }
   
     .btn {
       width: 100%;
-      margin: 1rem 0;
+      margin: 16px 0;
     }
   
     input {
